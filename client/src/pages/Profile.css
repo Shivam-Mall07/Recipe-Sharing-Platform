@@ -1,0 +1,319 @@
+.profile-page {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+/* User Card Header */
+.profile-header-card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.profile-avatar-large {
+  font-size: 3.5rem;
+  background-color: rgba(46, 125, 50, 0.1);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+}
+
+.profile-user-details {
+  flex-grow: 1;
+}
+
+.profile-user-details h2 {
+  font-size: 1.8rem;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.profile-email, .profile-date {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.profile-counters {
+  display: flex;
+  gap: 20px;
+}
+
+.counter-box {
+  background-color: var(--bg-light);
+  border: 1px solid var(--border-color);
+  padding: 16px 24px;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  min-width: 140px;
+}
+
+.counter-num {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+.counter-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Tab Toggle Button Bar */
+.profile-tabs {
+  display: flex;
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: 30px;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  position: relative;
+  transition: var(--transition-fast);
+}
+
+.tab-btn:hover {
+  color: var(--primary);
+}
+
+.tab-btn.active {
+  color: var(--primary);
+}
+
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary);
+}
+
+/* Tab content and grids */
+.tab-content-area {
+  min-height: 300px;
+}
+
+.profile-empty-tab {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.profile-empty-tab h3 {
+  font-size: 1.3rem;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.profile-empty-tab p {
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+/* Profile recipes grid with action buttons underneath */
+.profile-recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.profile-recipe-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.profile-recipe-actions {
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.profile-recipe-actions .btn {
+  flex-grow: 1;
+}
+
+.profile-edit-btn {
+  background-color: #ebf8ff;
+  border-color: #bee3f8;
+  color: #2b6cb0;
+}
+
+.profile-edit-btn:hover {
+  background-color: #bee3f8;
+}
+
+/* Profile User Reviews styling */
+.profile-reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-review-card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 200px 1fr auto;
+  gap: 24px;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.profile-review-recipe-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-review-img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.profile-review-recipe-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.profile-review-recipe-title:hover {
+  color: var(--primary);
+}
+
+.deleted-recipe-hint {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.profile-review-comment-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-review-date {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.profile-review-text {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.profile-review-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-review-edit-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-review-edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Mobile Breakpoints */
+@media (max-width: 768px) {
+  .profile-header-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 24px;
+  }
+
+  .profile-avatar-large {
+    width: 80px;
+    height: 80px;
+    font-size: 2.8rem;
+  }
+
+  .profile-counters {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .counter-box {
+    width: 100%;
+  }
+
+  .profile-tabs {
+    flex-direction: column;
+    border-bottom: none;
+    gap: 5px;
+  }
+
+  .tab-btn {
+    text-align: center;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+  }
+
+  .tab-btn.active::after {
+    display: none;
+  }
+
+  .tab-btn.active {
+    background-color: var(--primary);
+    color: var(--text-light);
+    border-color: var(--primary);
+  }
+
+  .profile-recipes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-review-card {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .profile-review-img {
+    height: 140px;
+  }
+
+  .profile-review-controls {
+    flex-direction: row;
+    justify-content: flex-end;
+    border-top: 1px solid var(--border-color);
+    padding-top: 10px;
+  }
+}
